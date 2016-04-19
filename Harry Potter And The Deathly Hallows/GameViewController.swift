@@ -8,12 +8,19 @@
 
 import UIKit
 import SpriteKit
+// For custom sound effect from segue entrance touch.
+import AVFoundation
 
 class GameViewController: UIViewController {
+    
+    var magicSound: AVAudioPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Custom magic sound effect.
+        magicButtonSound()
+        
         if let scene = GameScene(fileNamed:"GameScene") {
             // Configure the view.
             let skView = self.view as! SKView
@@ -47,6 +54,17 @@ class GameViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
 
+    // Magic sound function.
+    private func magicButtonSound(){
+        let path = NSBundle.mainBundle().URLForResource("Harry Potter top 10 soundtracks", withExtension: "mp3")
+        do {
+            try magicSound = AVAudioPlayer(contentsOfURL: path!)
+        } catch {
+            print("AUDIO PROBLEM?!")
+        }
+        magicSound.play()
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

@@ -1,13 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8118" systemVersion="15A172" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9kV-GA-gcm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8098"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HARRP___.TTF">
+            <string>HarryPotter</string>
+            <string>HarryPotter</string>
+            <string>HarryPotter</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="5xT-6F-iKe">
+            <objects>
+                <viewController id="9kV-GA-gcm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6GT-8I-OtQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="oNw-xw-ifV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MQr-5V-vTR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EyG-Me-bLc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-Z3-Lon">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="600" id="3Im-F5-8Vc"/>
+                                            <constraint firstAttribute="height" constant="600" id="4iC-Ow-hwc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HarryPotter" family="Harry Potter" pointSize="18"/>
+                                        <state key="normal" title="HARRY POTTER" image="QLOGO.png"/>
+                                        <connections>
+                                            <segue destination="BV1-FR-VrT" kind="show" id="2yj-fY-Tdr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppv-xb-okf">
+                                <rect key="frame" x="0.0" y="167" width="600" height="160"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="IUC-Zg-ppZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HarryPotter" family="Harry Potter" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IUC-Zg-ppZ"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="And The Hogwarts Quidditch Games" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZe-qJ-IAG">
+                                <rect key="frame" x="75" y="293" width="368" height="43"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="368" id="3mm-jV-kgy"/>
+                                    <constraint firstAttribute="height" constant="43" id="lVh-17-RZZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HarryPotter" family="Harry Potter" pointSize="11"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bZe-qJ-IAG" firstAttribute="centerY" secondItem="MQr-5V-vTR" secondAttribute="centerY" id="41z-8c-xID"/>
+                            <constraint firstItem="oNw-xw-ifV" firstAttribute="top" secondItem="ppv-xb-okf" secondAttribute="bottom" constant="273" id="9JK-ha-n7w"/>
+                            <constraint firstItem="ppv-xb-okf" firstAttribute="leading" secondItem="EyG-Me-bLc" secondAttribute="leading" id="Bhj-Bl-q5f"/>
+                            <constraint firstItem="EyG-Me-bLc" firstAttribute="centerY" secondItem="MQr-5V-vTR" secondAttribute="centerY" id="Ebr-y7-MIR"/>
+                            <constraint firstItem="ppv-xb-okf" firstAttribute="top" secondItem="6GT-8I-OtQ" secondAttribute="bottom" constant="147" id="Jfd-IS-uL7"/>
+                            <constraint firstItem="EyG-Me-bLc" firstAttribute="centerX" secondItem="MQr-5V-vTR" secondAttribute="centerX" id="W1I-YL-FJA"/>
+                            <constraint firstItem="oNw-xw-ifV" firstAttribute="top" secondItem="ppv-xb-okf" secondAttribute="bottom" constant="273" id="cNs-pU-qVn"/>
+                            <constraint firstItem="ppv-xb-okf" firstAttribute="trailing" secondItem="EyG-Me-bLc" secondAttribute="trailing" id="gEo-fh-WZp"/>
+                            <constraint firstItem="ppv-xb-okf" firstAttribute="top" secondItem="6GT-8I-OtQ" secondAttribute="bottom" constant="147" id="mcJ-52-l35"/>
+                            <constraint firstItem="bZe-qJ-IAG" firstAttribute="centerX" secondItem="MQr-5V-vTR" secondAttribute="centerX" id="tIQ-rJ-bSr"/>
+                            <constraint firstItem="ppv-xb-okf" firstAttribute="baseline" secondItem="bZe-qJ-IAG" secondAttribute="firstBaseline" id="tYt-To-7fl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jfd-IS-uL7"/>
+                                <exclude reference="9JK-ha-n7w"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOx-fa-xeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394" y="390"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Harry_Potter_And_The_Deathly_Hallows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -15,11 +110,16 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="299" y="365"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="QLOGO.png" width="1200" height="750"/>
+    </resources>
 </document>
